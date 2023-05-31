@@ -13,6 +13,17 @@ type option = {
   label: string;
 } | null;
 
+type cityOption = {
+  value: {
+    latitude: string;
+    longitude: string;
+    countryCode: string;
+    name: string;
+    stateCode: string;
+  };
+  label: string;
+} | null;
+
 const options = Country.getAllCountries().map((country) => ({
   value: {
     latitude: country.latitude,
@@ -24,6 +35,7 @@ const options = Country.getAllCountries().map((country) => ({
 
 export default function CityPicker() {
   const [selectedCountry, setSelectedCountry] = useState<option>(null);
+  const [selectedCity, setSelectedCityOption] = useState<cityOption>(null);
   return (
     <div>
       <Select options={options} />
