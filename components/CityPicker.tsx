@@ -4,7 +4,7 @@ import { Country, City } from 'country-state-city';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import Select from 'react-select';
-import { GlobeAltIcon } from '@heroicons/react/solid';
+import { GlobeAltIcon, LocationMarkerIcon } from '@heroicons/react/solid';
 
 type option = {
   value: {
@@ -44,6 +44,10 @@ export default function CityPicker() {
     setSelectedCountry(option);
     setSelectedCity(null);
   }
+  function handleSelectedCity(option: cityOption) {
+    setSelectedCity(option);
+    // router.push(`/location/${option?.value.latitude}/${option?.value.longitude}`)
+  }
 
   return (
     <div className='space-y-4'>
@@ -59,6 +63,32 @@ export default function CityPicker() {
           options={options}
         />
       </div>
+
+      {selectedCountry && (
+        <div className='space-y-2'>
+          <div className='flex items-center space-x-2 text-white/80'>
+            <LocationMarkerIcon className='h-5 w-5 text-white' />
+            <label htmlFor='country'>City</label>
+          </div>
+          <Select
+            className='text-black'
+            value={selectedCity}
+            onChange={handleSelectedCity}
+            options={City.getCitiesOfCountry(
+              selectedCountry.value.isoCode
+            )?.map((state) => ({
+              value: {
+                latitude: state.latitude!,
+                longitude: state.longitude!,
+                countryCode: state.countryCode,
+                name: state.name,
+                stateCode: state.stateCode,
+              },
+              label: state.name,
+            }))}
+          />
+        </div>
+      )}
     </div>
   );
 }
