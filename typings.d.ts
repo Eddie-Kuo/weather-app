@@ -1,0 +1,70 @@
+interface CurrentWeather {
+  temperature: number;
+  time: string;
+  weathercode: number;
+  winddirection: number;
+  windspeed: number;
+}
+
+interface Daily {
+  sunrise: string;
+  sunset: string;
+  temperature_2m_max: string;
+  time: string;
+  uv_index_clear_sky_max: string;
+  uv_index_max: string;
+  weathercode: string;
+}
+
+interface DailyUnits {
+  sunrise: String;
+  sunset: String;
+  temperature_2m_max: String;
+  time: String;
+  uv_index_clear_sky_max: String;
+  uv_index_max: String;
+  weathercode: String;
+}
+
+interface Hourly {
+  apparent_temperature: number;
+  dewpoint_2m: number;
+  precipitation: number;
+  precipitation_probability: number;
+  relativehumidity_2m: number;
+  snow_depth: number;
+  temperature_2m: number;
+  time: string;
+  uv_index: number;
+  uv_index_clear_sky: number;
+  windspeed_10m: number;
+}
+
+interface HourlyUnits {
+  apparent_temperature: String;
+  dewpoint_2m: String;
+  precipitation: String;
+  precipitation_probability: String;
+  relativehumidity_2m: String;
+  snow_depth: String;
+  temperature_2m: String;
+  time: String;
+  uv_index: String;
+  uv_index_clear_sky: String;
+  windspeed_10m: String;
+}
+
+interface Root {
+  current_weather: CurrentWeather;
+  daily: Daily;
+  daily_units: DailyUnits;
+  elevation: number;
+  generationtime_ms: number;
+  hourly: Hourly;
+  hourly_units: HourlyUnits;
+  latitude: number;
+  longitude: number;
+  timezone: string;
+  timezone_abbreviation: string;
+  utc_offset_seconds: number;
+}

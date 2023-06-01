@@ -1,6 +1,6 @@
 type CurrentWeather {
   is_day: Int
-  temperature: Float
+  temperature: Int
   time: DateTime
   weathercode: Int
   winddirection: Int
