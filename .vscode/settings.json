@@ -1,4 +1,11 @@
 {
   "cSpell.ignoreWords": ["winddirection"],
-  "cSpell.words": ["weathercode", "windspeed"]
+  "cSpell.words": [
+    "dewpoint",
+    "generationtime",
+    "relativehumidity",
+    "weathercode",
+    "windgusts",
+    "windspeed"
+  ]
 }
