@@ -5,7 +5,7 @@ import { Callout } from '@tremor/react';
 
 type Props = {
   message: string;
-  alert?: string;
+  alert?: boolean;
 };
 
 export default function CalloutCard({ message, alert }: Props) {
