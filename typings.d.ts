@@ -11,6 +11,7 @@ interface Daily {
   sunrise: string;
   sunset: string;
   temperature_2m_max: string;
+  temperature_2m_min: string;
   time: string;
   uv_index_clear_sky_max: string;
   uv_index_max: string;
@@ -21,6 +22,7 @@ interface DailyUnits {
   sunrise: String;
   sunset: String;
   temperature_2m_max: String;
+  temperature_2m_min: String;
   time: String;
   uv_index_clear_sky_max: String;
   uv_index_max: String;

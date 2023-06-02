@@ -57,6 +57,11 @@ export default async function WeatherPage({
               metric={`${results.daily.temperature_2m_max[0]}°`}
               color='yellow'
             />
+            <StatCard
+              title='Maximum Temperature'
+              metric={`${results.daily.temperature_2m_min[0]}°`}
+              color='green'
+            />
           </div>
         </div>
       </div>
