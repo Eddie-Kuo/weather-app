@@ -1,6 +1,7 @@
 import fetchWeatherQuery from '@/graphQl/queries/fetchWeatherQueries';
 import { getClient } from '@/apollo-client';
 import CalloutCard from '@/components/CalloutCard';
+import StatCard from '@/components/StatCard';
 
 type Props = {
   params: {
@@ -48,6 +49,14 @@ export default async function WeatherPage({
 
           <div>
             <CalloutCard message='This is where GPT-4 summary will go' />
+          </div>
+
+          <div>
+            <StatCard
+              title='Maximum Temperature'
+              metric={`${results.daily.temperature_2m_max[0]}°`}
+              color='yellow'
+            />
           </div>
         </div>
       </div>
