@@ -5,16 +5,16 @@ import { Callout } from '@tremor/react';
 
 type Props = {
   message: string;
-  warning?: string;
+  alert?: string;
 };
 
-export default function CalloutCard({ message, warning }: Props) {
+export default function CalloutCard({ message, alert }: Props) {
   return (
     <Callout
       className='mt-4'
       title={message}
-      icon={warning ? ExclamationIcon : CheckCircleIcon}
-      color={warning ? 'rose' : 'teal'}
+      icon={alert ? ExclamationIcon : CheckCircleIcon}
+      color={alert ? 'rose' : 'teal'}
     />
   );
 }

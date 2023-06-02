@@ -26,11 +26,7 @@ export default async function WeatherPage({
     },
   });
 
-  console.log('data', data);
-
   const results: Root = data.myQuery;
-
-  console.log(results);
 
   return (
     <div>
@@ -62,6 +58,33 @@ export default async function WeatherPage({
               metric={`${results.daily.temperature_2m_min[0]}°`}
               color='green'
             />
+
+            <div>
+              <StatCard
+                title='UV Index'
+                metric={`${results.daily.uv_index_max[0]}`}
+                color='rose'
+              />
+              {Number(results.daily.uv_index_max[0]) > 5 && (
+                <CalloutCard
+                  message={'The UV is high today, be sure to wear SPF!!'}
+                  alert
+                />
+              )}
+            </div>
+
+            <div>
+              <StatCard
+                title='Wind Speed'
+                metric={`${results.current_weather.windspeed}m/s`}
+                color='cyan'
+              />
+              <StatCard
+                title='Wind Speed'
+                metric={`${results.current_weather.winddirection}°`}
+                color='violet'
+              />
+            </div>
           </div>
         </div>
       </div>
