@@ -74,7 +74,7 @@ export default function InformationPanel({ city, lat, long, results }: Props) {
         </div>
       </div>
 
-      <div>
+      <div className='space-y-2 py-5'>
         <div className='flex items-center space-x-2 px-4 py-3 border border-[#6f90cd] rounded-md bg-[#405885] '>
           <SunIcon className='h-10 w-10 text-gray-400' />
 
@@ -82,6 +82,20 @@ export default function InformationPanel({ city, lat, long, results }: Props) {
             <p className='font-extralight'>Sunrise</p>
             <p className='uppercase text-2xl'>
               {new Date(results.daily.sunrise[0]).toLocaleTimeString('en-GB', {
+                hour: 'numeric',
+                minute: 'numeric',
+                hour12: true,
+              })}
+            </p>
+          </div>
+        </div>
+        <div className='flex items-center space-x-2 px-4 py-3 border border-[#6f90cd] rounded-md bg-[#405885] '>
+          <SunIcon className='h-10 w-10 text-gray-400' />
+
+          <div className='flex-1 flex justify-between items-center'>
+            <p className='font-extralight'>Sunset</p>
+            <p className='uppercase text-2xl'>
+              {new Date(results.daily.sunset[0]).toLocaleTimeString('en-GB', {
                 hour: 'numeric',
                 minute: 'numeric',
                 hour12: true,
