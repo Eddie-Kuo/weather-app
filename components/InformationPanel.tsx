@@ -1,3 +1,5 @@
+import weatherCodeToString from '@/lib/weatherCodeToString';
+import Image from 'next/image';
 import React from 'react';
 import CityPicker from './CityPicker';
 
@@ -51,11 +53,20 @@ export default function InformationPanel({ city, lat, long, results }: Props) {
 
       <div>
         <div>
-          {/* image */}
+          <Image
+            src={`https://www.weatherbit.io/static/img/icons/${
+              weatherCodeToString[results.current_weather.weathercode].icon
+            }.png`}
+            alt={weatherCodeToString[results.current_weather.weathercode].label}
+            width={75}
+            height={75}
+          />
           <div>
             <p>{results.current_weather.temperature.toFixed(1)}°C</p>
 
-            <p>{/* weather code */}</p>
+            <p>
+              {weatherCodeToString[results.current_weather.weathercode].label}
+            </p>
           </div>
         </div>
       </div>
