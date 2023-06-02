@@ -3,6 +3,7 @@ import { getClient } from '@/apollo-client';
 import CalloutCard from '@/components/CalloutCard';
 import StatCard from '@/components/StatCard';
 import InformationPanel from '@/components/InformationPanel';
+import TempChart from '@/components/TempChart';
 
 type Props = {
   params: {
@@ -28,6 +29,8 @@ export default async function WeatherPage({
   });
 
   const results: Root = data.myQuery;
+
+  console.log(results);
 
   return (
     <div className='flex flex-col min-h-screen md:flex-row'>
@@ -91,6 +94,7 @@ export default async function WeatherPage({
         <hr className='md-5' />
         <div className='space-y-3'>
           {/* TempChart */}
+          <TempChart results={results} />
           {/* RainChart */}
           {/* HumidityChart */}
         </div>

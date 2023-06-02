@@ -36,10 +36,10 @@ interface Hourly {
   precipitation_probability: number;
   relativehumidity_2m: number;
   snow_depth: number;
-  temperature_2m: number;
-  time: string;
-  uv_index: number;
-  uv_index_clear_sky: number;
+  temperature_2m: [number];
+  time: [string];
+  uv_index: [number];
+  uv_index_clear_sky: [number];
   windspeed_10m: number;
 }
 
@@ -53,7 +53,7 @@ interface HourlyUnits {
   temperature_2m: String;
   time: String;
   uv_index: String;
-  uv_index_clear_sky: String;
+  uv_index_clear_sky: [String];
   windspeed_10m: String;
 }
 
