@@ -30,8 +30,6 @@ export default async function WeatherPage({
 
   const results: Root = data.myQuery;
 
-  console.log(results);
-
   return (
     <div className='flex flex-col min-h-screen md:flex-row'>
       <InformationPanel city={city} results={results} lat={lat} long={long} />

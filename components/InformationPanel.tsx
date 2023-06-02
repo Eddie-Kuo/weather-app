@@ -13,7 +13,7 @@ type Props = {
 
 export default function InformationPanel({ city, lat, long, results }: Props) {
   return (
-    <div className='bg-gradient-to-br from-slate-400 to-slate-700 text-white p-10'>
+    <div className='bg-gradient-to-br from-slate-400 to-slate-700 text-white py-10 px-14'>
       <div className='pb-5'>
         <h1 className='text-6xl font-bold'>{decodeURI(city)}</h1>
         <p className='test-xs text-gray-300'>
@@ -29,7 +29,7 @@ export default function InformationPanel({ city, lat, long, results }: Props) {
         <div>
           <p className='text-xl'>
             {new Date().toLocaleDateString('en-GB', {
-              weekday: 'long',
+              weekday: 'short',
               year: 'numeric',
               month: 'long',
               day: 'numeric',
@@ -37,11 +37,11 @@ export default function InformationPanel({ city, lat, long, results }: Props) {
           </p>
 
           <p className='font-extralight'>
-            Timezone: {Intl.DateTimeFormat().resolvedOptions().timeZone}
+            Timezone: <br /> {Intl.DateTimeFormat().resolvedOptions().timeZone}
           </p>
         </div>
 
-        <p className='text-xl font-bold uppercase'>
+        <p className='text-lg font-bold uppercase'>
           {new Date().toLocaleTimeString('en-GB', {
             hour: 'numeric',
             minute: 'numeric',
@@ -63,7 +63,7 @@ export default function InformationPanel({ city, lat, long, results }: Props) {
             height={75}
           />
           <div className='flex items-center justify-between space-x-10'>
-            <p className='text-6xl font-semibold'>
+            <p className='text-5xl font-semibold'>
               {results.current_weather.temperature.toFixed(1)}°C
             </p>
 
