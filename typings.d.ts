@@ -33,7 +33,7 @@ interface Hourly {
   apparent_temperature: number;
   dewpoint_2m: number;
   precipitation: number;
-  precipitation_probability: number;
+  precipitation_probability: [number];
   relativehumidity_2m: number;
   snow_depth: number;
   temperature_2m: [number];
@@ -47,7 +47,7 @@ interface HourlyUnits {
   apparent_temperature: String;
   dewpoint_2m: String;
   precipitation: String;
-  precipitation_probability: String;
+  precipitation_probability: [Number];
   relativehumidity_2m: String;
   snow_depth: String;
   temperature_2m: String;
