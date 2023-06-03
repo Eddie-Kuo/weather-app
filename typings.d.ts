@@ -34,7 +34,7 @@ interface Hourly {
   dewpoint_2m: number;
   precipitation: number;
   precipitation_probability: [number];
-  relativehumidity_2m: number;
+  relativehumidity_2m: [number];
   snow_depth: number;
   temperature_2m: [number];
   time: [string];
