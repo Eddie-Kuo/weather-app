@@ -54,12 +54,12 @@ export default async function WeatherPage({
           <div className='grid grid-cols-1 xl:grid-cols-2 gap-5 m-2'>
             <StatCard
               title='Maximum Temperature'
-              metric={`${results.daily.temperature_2m_max[0]}°`}
+              metric={`${results.daily.temperature_2m_max[0]}°F`}
               color='yellow'
             />
             <StatCard
               title='Maximum Temperature'
-              metric={`${results.daily.temperature_2m_min[0]}°`}
+              metric={`${results.daily.temperature_2m_min[0]}°F`}
               color='green'
             />
 
