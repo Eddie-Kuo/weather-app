@@ -7,7 +7,7 @@ const fetchWeatherQuery = gql`
     $hourly: String = "temperature_2m,relativehumidity_2m,apparent_temperature,precipitation_probability,precipitation,rain,showers,snowfall,snow_depth,windgusts_10m,uv_index_clear_sky"
     $latitude: String
     $longitude: String
-    $temperature_unit: String
+    $temperature_unit: String = "fahrenheit"
     $timezone: String
     $windspeed_unit: String
   ) {

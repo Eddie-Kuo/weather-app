@@ -25,7 +25,7 @@ export default function RainChart({ results }: Props) {
 
   return (
     <Card>
-      <Title>Chances of Rain</Title>
+      <Title>Humidity</Title>
       <AreaChart
         className='mt-6'
         data={data}

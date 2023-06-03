@@ -64,7 +64,7 @@ export default function InformationPanel({ city, lat, long, results }: Props) {
           />
           <div className='flex items-center justify-between space-x-10'>
             <p className='text-5xl font-semibold'>
-              {results.current_weather.temperature.toFixed(1)}°C
+              {results.current_weather.temperature.toFixed(1)}°F
             </p>
 
             <p className='text-right font-extralight text-lg'>
