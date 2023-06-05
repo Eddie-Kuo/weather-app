@@ -28,7 +28,7 @@ export default function InformationPanel({ city, lat, long, results }: Props) {
       <div className='mt-5 flex items-center justify-between space-x-10 mb-5'>
         <div>
           <p className='text-xl'>
-            {new Date().toLocaleDateString('en-GB', {
+            {new Date().toLocaleDateString('en-US', {
               weekday: 'short',
               year: 'numeric',
               month: 'long',
@@ -42,7 +42,7 @@ export default function InformationPanel({ city, lat, long, results }: Props) {
         </div>
 
         <p className='text-lg font-bold uppercase'>
-          {new Date().toLocaleTimeString('en-GB', {
+          {new Date().toLocaleTimeString('en-US', {
             hour: 'numeric',
             minute: 'numeric',
             hour12: true,
