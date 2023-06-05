@@ -49,10 +49,6 @@ export default async function WeatherPage({
             </p>
           </div>
 
-          <div className='m-2 mb-10'>
-            <CalloutCard message='This is where GPT-4 summary will go' />
-          </div>
-
           <div className='grid grid-cols-1 xl:grid-cols-2 gap-5 m-2'>
             <StatCard
               title='Maximum Temperature'
