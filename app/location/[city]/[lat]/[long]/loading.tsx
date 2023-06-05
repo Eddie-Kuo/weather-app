@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Loading() {
   return (
-    <div className='bg-gradient-to-br from-slate-400 to-slate-700 flex flex-col items-center justify-center text-slate-500'>
+    <div className='bg-gradient-to-br from-slate-400 to-slate-700 min-h-screen flex flex-col items-center justify-center text-white'>
       <SunIcon
         className='h-24 w-24 animate-bounce text-yellow-500'
         color='yellow'
