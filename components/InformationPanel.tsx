@@ -11,6 +11,13 @@ type Props = {
   results: Root;
 };
 
+const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+const currentTime = new Date().toLocaleString('en-US', {
+  hour: 'numeric',
+  minute: 'numeric',
+  hour12: true,
+});
+
 export default function InformationPanel({ city, lat, long, results }: Props) {
   return (
     <div className='bg-gradient-to-br from-slate-400 to-slate-700 text-white py-10 px-14'>
@@ -37,17 +44,11 @@ export default function InformationPanel({ city, lat, long, results }: Props) {
           </p>
 
           <p className='font-extralight'>
-            Timezone: <br /> {Intl.DateTimeFormat().resolvedOptions().timeZone}
+            Timezone: <br /> {timeZone}
           </p>
         </div>
 
-        <p className='text-lg font-bold uppercase'>
-          {new Date().toLocaleTimeString('en-US', {
-            hour: 'numeric',
-            minute: 'numeric',
-            hour12: true,
-          })}
-        </p>
+        <p className='text-lg font-bold uppercase'>{currentTime}</p>
       </div>
 
       <hr className='mt-10 mb-5' />
