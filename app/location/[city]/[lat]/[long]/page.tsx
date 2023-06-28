@@ -56,7 +56,7 @@ export default async function WeatherPage({
               color='yellow'
             />
             <StatCard
-              title='Maximum Temperature'
+              title='Minimum Temperature'
               metric={`${results.daily.temperature_2m_min[0]}°F`}
               color='green'
             />
@@ -89,7 +89,7 @@ export default async function WeatherPage({
             </div>
           </div>
         </div>
-        <hr className='md-5' />
+        <hr className='mb-5' />
         <div className='space-y-3'>
           {/* TempChart */}
           <TempChart results={results} />
